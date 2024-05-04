@@ -1,0 +1,32 @@
+{
+  "version": "0.0.5",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "tsc",
+    "start": "node index.js",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "precommit": "lint-staged",
+    "postinstall": "husky install",
+    "test-sample": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bull-board/api": "^5.15.3",
+    "log4js": "^6.9.1",
+    "@types/node": "^20.3.1",
+    "eslint-config-prettier": "^9.0.0",
+    "class-transformer": "^0.5.1",
+    "ts-loader": "^9.4.3",
+    "@nestjs/platform-express": "^10.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@types/supertest": "^2.0.12",
+    "nestjs-telegraf": "^2.7.0",
+    "@aptos-labs/ts-sdk": "^1.9.1"
+  }
+}
