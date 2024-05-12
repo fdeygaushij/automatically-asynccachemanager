@@ -1,8 +1,9 @@
-function minDepth(root) {
-  if (!root) return 0;
-  if (!root.left && !root.right) return 1;
-  let min = Infinity;
-  if (root.left) min = Math.min(min, minDepth(root.left));
-  if (root.right) min = Math.min(min, minDepth(root.right));
-  return min + 1;
+function maxSubArray(nums) {
+  let maxSum = nums[0];
+  let currentSum = nums[0];
+  for (let i = 1; i < nums.length; i++) {
+    currentSum = Math.max(nums[i], currentSum + nums[i]);
+    maxSum = Math.max(maxSum, currentSum);
+  }
+  return maxSum;
 }
